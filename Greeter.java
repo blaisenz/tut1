@@ -17,10 +17,17 @@ public class Greeter {
   }
 
   public static void main(String[] args) {
+	int count = args.length;
+	if (count == 3) {
     String language = args[0];
     String country = args[1];
     String name = args[2];
     Greeter greeter = new Greeter(language, country, name);
     System.out.println(greeter.sayHello());
+	}
+	else {
+		System.out.println("requires 3 arguments");
+		
+	}
   }
 }
